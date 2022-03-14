@@ -1,4 +1,4 @@
-extends Sprite
+extends Area2D
 
 
 # Declare member variables here. Examples:
@@ -15,16 +15,30 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	position += direccio * velocitat * delta
+	
+	direccio = Vector2.ZERO
+
 	if Input.is_action_pressed("mou dreta"):
-		direccio = Vector2(1, 0)
+		direccio += Vector2.RIGHT
 	if Input.is_action_pressed("mou esquerra"):
-		direccio = Vector2(-1, 0)
+		direccio += Vector2.LEFT
+	if Input.is_action_pressed("mou abaix"):
+		direccio += Vector2.DOWN
+	if Input.is_action_pressed("mou adalt"):
+		direccio += Vector2.UP
+	
+	position += direccio.normalized() * velocitat * delta
+	direccio = Vector2(0,0)
+	
 	
 #	position += velocitat * delta
 #	print(position)
 #	if position.x >= 1024 or position.x <= 0:
-#		velocitat[0] = -velocitat[0]
+#		direccio = -direccio
 #	if position.y <= 0 or position.y >= 600:
-#		velocitat[1] = -velocitat[1]
+#		direccio = -direccio
 
+
+
+func _on_Personatge_area_entered(area):
+	modulate = Color(1,0,0)
