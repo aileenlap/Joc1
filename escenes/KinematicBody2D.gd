@@ -24,5 +24,30 @@ func _physics_process(delta):
 	velocitat += acceleracio * delta
 	velocitat = move_and_slide(velocitat, Vector2.UP)
 	
-#	if positon.y < -600:
-#		position = Vector2(301, 387)
+
+	if position.y >= 1000:
+		position = Vector2(201, 399)
+
+
+	anima(velocitat)
+	
+func anima(velocitat: Vector2):
+	var animacio : AnimatedSprite = $AnimatedSprite
+	if velocitat.x > 0:
+		animacio.flip_h = false
+		animacio.play('camina')
+	elif velocitat.x < 0:
+		animacio.flip_h = true
+		animacio.play('camina')
+	
+	if abs(velocitat.x) < 0.1:
+		animacio.play('quiet')
+		
+	if velocitat.y < -1:
+		animacio.play('salta')
+	
+	if Input.is_action_pressed("mou abaix") and is_on_floor():
+		animacio.play('agacha')
+		
+		
+		
