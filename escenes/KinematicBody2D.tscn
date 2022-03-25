@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://imatges/Players/128x256/Beige/alienBeige_walk2.png" type="Texture" id=1]
 [ext_resource path="res://escenes/KinematicBody2D.gd" type="Script" id=2]
@@ -6,9 +6,15 @@
 [ext_resource path="res://imatges/Players/128x256/Beige/alienBeige_walk1.png" type="Texture" id=4]
 [ext_resource path="res://imatges/Players/128x256/Beige/alienBeige_front.png" type="Texture" id=5]
 [ext_resource path="res://imatges/Players/128x256/Beige/alienBeige_duck.png" type="Texture" id=6]
+[ext_resource path="res://imatges/Players/128x256/Beige/alienBeige_hit.png" type="Texture" id=7]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
+"frames": [ ExtResource( 6 ) ],
+"loop": true,
+"name": "agacha",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 3 ) ],
 "loop": true,
 "name": "salta",
@@ -19,14 +25,14 @@ animations = [ {
 "name": "quiet",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 6 ) ],
-"loop": true,
-"name": "agacha",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 4 ), ExtResource( 1 ) ],
 "loop": true,
 "name": "camina",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ) ],
+"loop": true,
+"name": "hit",
 "speed": 5.0
 } ]
 
@@ -41,7 +47,7 @@ script = ExtResource( 2 )
 position = Vector2( 26.125, 43.25 )
 scale = Vector2( 1.0293, 0.904297 )
 frames = SubResource( 1 )
-animation = "camina"
+animation = "hit"
 playing = true
 flip_h = true
 

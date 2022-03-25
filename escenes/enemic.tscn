@@ -7,15 +7,15 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 2 ) ],
-"loop": true,
-"name": "mort",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 3 ), ExtResource( 1 ) ],
 "loop": true,
 "name": "viu",
 "speed": 2.5
+}, {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "mort",
+"speed": 5.0
 } ]
 
 [sub_resource type="CapsuleShape2D" id=2]
@@ -26,14 +26,12 @@ height = 30.0
 script = ExtResource( 4 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 1214, 291.5 )
 scale = Vector2( 0.734375, 0.726563 )
 frames = SubResource( 1 )
 animation = "viu"
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 1215, 299 )
+position = Vector2( 0, 6 )
 shape = SubResource( 2 )
-
-[connection signal="body_entered" from="." to="." method="_on_Enemic_body_entered"]

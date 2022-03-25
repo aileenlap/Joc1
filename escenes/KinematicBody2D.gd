@@ -55,8 +55,14 @@ func anima(velocitat: Vector2):
 
 
 func _on_Porta_body_entered(body):
-	get_tree().change_scene("res://Fons2.tscn")
+	get_tree().change_scene("res://escenes/Fons2.tscn")
 	
 
 func _on_Enemic_body_entered(body):
+	var animacio : AnimatedSprite = $AnimatedSprite
+	animacio.play('hit')
 	position = Vector2(201, 399)
+	
+func _on_Port_body_entered(body):
+	get_tree().change_scene("res://escenes/Fons1.tscn")
+	position = Vector2(439, -232)
