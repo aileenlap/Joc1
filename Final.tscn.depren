@@ -1,0 +1,38 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://imatges/Items/flagRed1.png" type="Texture" id=1]
+[ext_resource path="res://imatges/Items/flagRed2.png" type="Texture" id=2]
+[ext_resource path="res://imatges/Items/flagRed_down.png" type="Texture" id=3]
+[ext_resource path="res://escenes/Final.gd" type="Script" id=4]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "guanya",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 1 ), ExtResource( 2 ) ],
+"loop": true,
+"name": "general",
+"speed": 2.3
+} ]
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 31.0
+height = 70.0
+
+[node name="KinematicBody2D3" type="KinematicBody2D"]
+position = Vector2( 1701, -65 )
+script = ExtResource( 4 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( -499, -282 )
+scale = Vector2( 0.886719, 1.04687 )
+frames = SubResource( 1 )
+animation = "general"
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -535, -278 )
+shape = SubResource( 2 )

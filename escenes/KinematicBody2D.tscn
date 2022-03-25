@@ -9,11 +9,6 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [  ],
-"loop": true,
-"name": "default",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 3 ) ],
 "loop": true,
 "name": "salta",
@@ -46,7 +41,9 @@ script = ExtResource( 2 )
 position = Vector2( 26.125, 43.25 )
 scale = Vector2( 1.0293, 0.904297 )
 frames = SubResource( 1 )
-animation = "agacha"
+animation = "camina"
+playing = true
+flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 23, 104 )

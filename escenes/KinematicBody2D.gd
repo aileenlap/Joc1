@@ -51,3 +51,12 @@ func anima(velocitat: Vector2):
 		
 		
 		
+
+
+
+func _on_Porta_body_entered(body):
+	get_tree().change_scene("res://Fons2.tscn")
+	
+
+func _on_Enemic_body_entered(body):
+	position = Vector2(201, 399)

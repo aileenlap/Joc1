@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Terra.tscn" type="PackedScene" id=1]
+[ext_resource path="res://escenes/Terra.tscn" type="PackedScene" id=1]
 [ext_resource path="res://escenes/KinematicBody2D.tscn" type="PackedScene" id=2]
 [ext_resource path="res://escenes/EscenaCossos.gd" type="Script" id=3]
 
