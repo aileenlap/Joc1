@@ -28,16 +28,23 @@ rotation = -3.14159
 texture = ExtResource( 1 )
 
 [node name="ColoredShroom4" type="Sprite" parent="Fons"]
-position = Vector2( 1525, 1260 )
+position = Vector2( 1918.71, 832.884 )
 rotation = -3.14159
 texture = ExtResource( 1 )
+offset = Vector2( 393.71, -427.117 )
 
 [node name="ColoredShroom5" type="Sprite" parent="Fons"]
 position = Vector2( 2556, 244 )
 texture = ExtResource( 1 )
 
+[node name="ColoredShroom6" type="Sprite" parent="Fons"]
+position = Vector2( 2940, 834 )
+rotation = 3.14159
+texture = ExtResource( 1 )
+offset = Vector2( 393.71, -427.117 )
+
 [node name="Plataforma" type="Node2D" parent="."]
-position = Vector2( 1451, -84 )
+position = Vector2( 1434, 94 )
 
 [node name="DirtLeft" type="Sprite" parent="Plataforma"]
 position = Vector2( -1329.75, 577 )
@@ -243,9 +250,9 @@ position = Vector2( -1182.88, 657 )
 shape = SubResource( 1 )
 
 [node name="Porta2" parent="." instance=ExtResource( 2 )]
-position = Vector2( -1739, -64 )
+position = Vector2( -1749, 117 )
 
 [node name="Player" parent="." instance=ExtResource( 9 )]
-position = Vector2( 168, 298 )
+position = Vector2( 163, 516 )
 
 [connection signal="body_entered" from="Port" to="Player" method="_on_Port_body_entered"]

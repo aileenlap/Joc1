@@ -1,22 +1,34 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://imatges/Backgrounds/blue_land.png" type="Texture" id=1]
-[ext_resource path="res://imatges/Backgrounds/blue_grass.png" type="Texture" id=2]
-[ext_resource path="res://escenes/Final.tscn" type="PackedScene" id=3]
-[ext_resource path="res://escenes/KinematicBody2D.tscn" type="PackedScene" id=4]
-[ext_resource path="res://imatges/Ground/Stone/stoneMid.png" type="Texture" id=5]
-[ext_resource path="res://imatges/Ground/Stone/stoneRight.png" type="Texture" id=6]
-[ext_resource path="res://imatges/Ground/Stone/stoneLeft.png" type="Texture" id=7]
-[ext_resource path="res://escenes/enemic.tscn" type="PackedScene" id=8]
-[ext_resource path="res://escenes/Porta.tscn" type="PackedScene" id=9]
+[ext_resource path="res://imatges/Ground/Stone/stoneRight.png" type="Texture" id=2]
+[ext_resource path="res://imatges/Ground/Stone/stoneMid.png" type="Texture" id=3]
+[ext_resource path="res://imatges/Backgrounds/blue_grass.png" type="Texture" id=4]
+[ext_resource path="res://imatges/Ground/Stone/stoneLeft.png" type="Texture" id=5]
+[ext_resource path="res://escenes/enemic.tscn" type="PackedScene" id=6]
+[ext_resource path="res://escenes/Porta.tscn" type="PackedScene" id=7]
+[ext_resource path="res://escenes/KinematicBody2D.tscn" type="PackedScene" id=8]
+[ext_resource path="res://escenes/Final.tscn" type="PackedScene" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 202.75, 38.7501 )
 
-[node name="Escena" type="Node2D"]
-__meta__ = {
-"_edit_horizontal_guides_": [  ]
-}
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 202.75, 38.7501 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 202.75, 38.7501 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 202.75, 38.7501 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 202.75, 38.7501 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 202.75, 38.7501 )
+
+[node name="Fons3" type="Node2D"]
 
 [node name="Fons" type="Node2D" parent="."]
 
@@ -29,7 +41,7 @@ offset = Vector2( 512, 296.082 )
 [node name="BlueGrass" type="Sprite" parent="Fons"]
 position = Vector2( 2222.5, -35.5005 )
 scale = Vector2( 1.40918, 1.24121 )
-texture = ExtResource( 2 )
+texture = ExtResource( 4 )
 
 [node name="BlueLand2" type="Sprite" parent="Fons"]
 position = Vector2( -2040.49, -1.65527 )
@@ -58,7 +70,7 @@ scale = Vector2( 1.47363, 1.24121 )
 texture = ExtResource( 1 )
 offset = Vector2( -1897.01, -993.919 )
 
-[node name="Porta" parent="." instance=ExtResource( 9 )]
+[node name="Porta" parent="." instance=ExtResource( 7 )]
 
 [node name="Plataforma" type="Node2D" parent="."]
 position = Vector2( 1463, -150 )
@@ -66,27 +78,27 @@ position = Vector2( 1463, -150 )
 [node name="StoneMid" type="Sprite" parent="Plataforma"]
 position = Vector2( -1265, 655.001 )
 scale = Vector2( 0.726562, 0.59375 )
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
 [node name="StoneLeft" type="Sprite" parent="Plataforma"]
 position = Vector2( -1348, 655.001 )
 scale = Vector2( 0.625, 0.59375 )
-texture = ExtResource( 7 )
+texture = ExtResource( 5 )
 
 [node name="StoneMid2" type="Sprite" parent="Plataforma"]
 position = Vector2( -1179.5, 655.001 )
 scale = Vector2( 0.617188, 0.59375 )
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
 [node name="StoneMid3" type="Sprite" parent="Plataforma"]
 position = Vector2( -1100, 655.001 )
 scale = Vector2( 0.632813, 0.59375 )
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
 [node name="StoneRight" type="Sprite" parent="Plataforma"]
 position = Vector2( -1022, 655.001 )
 scale = Vector2( 0.617188, 0.59375 )
-texture = ExtResource( 6 )
+texture = ExtResource( 2 )
 
 [node name="Terra" type="StaticBody2D" parent="Plataforma"]
 
@@ -107,27 +119,27 @@ position = Vector2( 1463, -150 )
 [node name="StoneMid" type="Sprite" parent="Plataforma2"]
 position = Vector2( -721.999, 653.001 )
 scale = Vector2( 0.726562, 0.59375 )
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
 [node name="StoneLeft" type="Sprite" parent="Plataforma2"]
 position = Vector2( -804.999, 653 )
 scale = Vector2( 0.625, 0.59375 )
-texture = ExtResource( 7 )
+texture = ExtResource( 5 )
 
 [node name="StoneMid2" type="Sprite" parent="Plataforma2"]
 position = Vector2( -636.498, 653.001 )
 scale = Vector2( 0.617188, 0.59375 )
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
 [node name="StoneMid3" type="Sprite" parent="Plataforma2"]
 position = Vector2( -556.998, 653.001 )
 scale = Vector2( 0.632813, 0.59375 )
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
 [node name="StoneRight" type="Sprite" parent="Plataforma2"]
 position = Vector2( -478.998, 653.001 )
 scale = Vector2( 0.617188, 0.59375 )
-texture = ExtResource( 6 )
+texture = ExtResource( 2 )
 
 [node name="Terra" type="StaticBody2D" parent="Plataforma2"]
 
@@ -140,10 +152,7 @@ margin_bottom = 693.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Plataforma2/Terra"]
 position = Vector2( -640.999, 653 )
-shape = SubResource( 1 )
-
-[node name="KinematicBody2D" parent="." instance=ExtResource( 4 )]
-position = Vector2( 151, 348 )
+shape = SubResource( 2 )
 
 [node name="Plataforma3" type="Node2D" parent="."]
 position = Vector2( 1463, -150 )
@@ -151,27 +160,27 @@ position = Vector2( 1463, -150 )
 [node name="StoneMid" type="Sprite" parent="Plataforma3"]
 position = Vector2( -254.999, 528.001 )
 scale = Vector2( 0.726562, 0.59375 )
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
 [node name="StoneLeft" type="Sprite" parent="Plataforma3"]
 position = Vector2( -337.999, 528.001 )
 scale = Vector2( 0.625, 0.59375 )
-texture = ExtResource( 7 )
+texture = ExtResource( 5 )
 
 [node name="StoneMid2" type="Sprite" parent="Plataforma3"]
 position = Vector2( -169.498, 528.001 )
 scale = Vector2( 0.617188, 0.59375 )
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
 [node name="StoneMid3" type="Sprite" parent="Plataforma3"]
 position = Vector2( -89.9984, 528.001 )
 scale = Vector2( 0.632813, 0.59375 )
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
 [node name="StoneRight" type="Sprite" parent="Plataforma3"]
 position = Vector2( -11.9984, 528.001 )
 scale = Vector2( 0.617188, 0.59375 )
-texture = ExtResource( 6 )
+texture = ExtResource( 2 )
 
 [node name="Terra" type="StaticBody2D" parent="Plataforma3"]
 position = Vector2( 467, -125 )
@@ -185,9 +194,9 @@ margin_bottom = 693.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Plataforma3/Terra"]
 position = Vector2( -640.999, 653 )
-shape = SubResource( 1 )
+shape = SubResource( 3 )
 
-[node name="Enemic" parent="." instance=ExtResource( 8 )]
+[node name="Enemic" parent="." instance=ExtResource( 6 )]
 position = Vector2( 1215, 292 )
 
 [node name="Plataforma4" type="Node2D" parent="."]
@@ -196,27 +205,27 @@ position = Vector2( 1463, -150 )
 [node name="StoneMid" type="Sprite" parent="Plataforma4"]
 position = Vector2( 202.001, 288.001 )
 scale = Vector2( 0.726562, 0.59375 )
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
 [node name="StoneLeft" type="Sprite" parent="Plataforma4"]
 position = Vector2( 119.001, 288.001 )
 scale = Vector2( 0.625, 0.59375 )
-texture = ExtResource( 7 )
+texture = ExtResource( 5 )
 
 [node name="StoneMid2" type="Sprite" parent="Plataforma4"]
 position = Vector2( 287.502, 288.001 )
 scale = Vector2( 0.617188, 0.59375 )
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
 [node name="StoneMid3" type="Sprite" parent="Plataforma4"]
 position = Vector2( 367.002, 288.001 )
 scale = Vector2( 0.632813, 0.59375 )
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
 [node name="StoneRight" type="Sprite" parent="Plataforma4"]
 position = Vector2( 445.002, 288.001 )
 scale = Vector2( 0.617188, 0.59375 )
-texture = ExtResource( 6 )
+texture = ExtResource( 2 )
 
 [node name="Terra" type="StaticBody2D" parent="Plataforma4"]
 position = Vector2( 924, -365 )
@@ -230,7 +239,7 @@ margin_bottom = 693.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Plataforma4/Terra"]
 position = Vector2( -640.999, 653 )
-shape = SubResource( 1 )
+shape = SubResource( 4 )
 
 [node name="Plataforma5" type="Node2D" parent="."]
 position = Vector2( 760, -529 )
@@ -238,27 +247,27 @@ position = Vector2( 760, -529 )
 [node name="StoneMid" type="Sprite" parent="Plataforma5"]
 position = Vector2( 202.001, 288.001 )
 scale = Vector2( 0.726562, 0.59375 )
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
 [node name="StoneLeft" type="Sprite" parent="Plataforma5"]
 position = Vector2( 119.001, 288.001 )
 scale = Vector2( 0.625, 0.59375 )
-texture = ExtResource( 7 )
+texture = ExtResource( 5 )
 
 [node name="StoneMid2" type="Sprite" parent="Plataforma5"]
 position = Vector2( 287.502, 288.001 )
 scale = Vector2( 0.617188, 0.59375 )
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
 [node name="StoneMid3" type="Sprite" parent="Plataforma5"]
 position = Vector2( 367.002, 288.001 )
 scale = Vector2( 0.632813, 0.59375 )
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
 [node name="StoneRight" type="Sprite" parent="Plataforma5"]
 position = Vector2( 445.002, 288.001 )
 scale = Vector2( 0.617188, 0.59375 )
-texture = ExtResource( 6 )
+texture = ExtResource( 2 )
 
 [node name="Terra" type="StaticBody2D" parent="Plataforma5"]
 position = Vector2( 924, -365 )
@@ -272,7 +281,7 @@ margin_bottom = 693.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Plataforma5/Terra"]
 position = Vector2( -640.999, 653 )
-shape = SubResource( 1 )
+shape = SubResource( 5 )
 
 [node name="Plataforma6" type="Node2D" parent="."]
 position = Vector2( 309, -336 )
@@ -280,27 +289,27 @@ position = Vector2( 309, -336 )
 [node name="StoneMid" type="Sprite" parent="Plataforma6"]
 position = Vector2( 177, 304 )
 scale = Vector2( 0.726562, 0.59375 )
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
 [node name="StoneLeft" type="Sprite" parent="Plataforma6"]
 position = Vector2( 94, 304 )
 scale = Vector2( 0.625, 0.59375 )
-texture = ExtResource( 7 )
+texture = ExtResource( 5 )
 
 [node name="StoneMid2" type="Sprite" parent="Plataforma6"]
 position = Vector2( 262.5, 304.001 )
 scale = Vector2( 0.617188, 0.59375 )
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
 [node name="StoneMid3" type="Sprite" parent="Plataforma6"]
 position = Vector2( 342, 304.001 )
 scale = Vector2( 0.632813, 0.59375 )
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
 [node name="StoneRight" type="Sprite" parent="Plataforma6"]
 position = Vector2( 420, 304.001 )
 scale = Vector2( 0.617188, 0.59375 )
-texture = ExtResource( 6 )
+texture = ExtResource( 2 )
 
 [node name="Terra" type="StaticBody2D" parent="Plataforma6"]
 position = Vector2( 898.999, -349 )
@@ -314,13 +323,15 @@ margin_bottom = 693.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Plataforma6/Terra"]
 position = Vector2( -640.999, 653 )
-shape = SubResource( 1 )
+shape = SubResource( 6 )
 
-[node name="Final" parent="." instance=ExtResource( 3 )]
-position = Vector2( 1235, -344 )
+[node name="Final" parent="." instance=ExtResource( 9 )]
+position = Vector2( 1232, -348 )
 
-[node name="Porta2" parent="." instance=ExtResource( 9 )]
+[node name="Porta2" parent="." instance=ExtResource( 7 )]
 position = Vector2( 452, -212 )
 
-[connection signal="body_entered" from="Porta" to="KinematicBody2D" method="_on_Porta_body_entered"]
+[node name="KinematicBody2D" parent="." instance=ExtResource( 8 )]
+position = Vector2( 465, -187 )
+
 [connection signal="body_entered" from="Enemic" to="KinematicBody2D" method="_on_Enemic_body_entered"]

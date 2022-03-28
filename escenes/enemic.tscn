@@ -7,15 +7,15 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 3 ), ExtResource( 1 ) ],
-"loop": true,
-"name": "viu",
-"speed": 2.5
-}, {
 "frames": [ ExtResource( 2 ) ],
 "loop": true,
 "name": "mort",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ), ExtResource( 1 ) ],
+"loop": true,
+"name": "viu",
+"speed": 2.5
 } ]
 
 [sub_resource type="CapsuleShape2D" id=2]

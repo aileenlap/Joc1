@@ -38,13 +38,12 @@ animations = [ {
 
 [sub_resource type="CapsuleShape2D" id=2]
 radius = 42.0
-height = 10.0
+height = 46.0
 
 [node name="Player" type="KinematicBody2D"]
 script = ExtResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 26.125, 43.25 )
 scale = Vector2( 1.0293, 0.904297 )
 frames = SubResource( 1 )
 animation = "hit"
@@ -52,9 +51,11 @@ playing = true
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 23, 104 )
+position = Vector2( -3, 48 )
 shape = SubResource( 2 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( 23, 104 )
+position = Vector2( -1, 4 )
 current = true
+
+[connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]

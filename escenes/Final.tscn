@@ -7,15 +7,15 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 3 ) ],
-"loop": true,
-"name": "guanya",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 1 ), ExtResource( 2 ) ],
 "loop": true,
 "name": "general",
 "speed": 2.3
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "guanya",
+"speed": 5.0
 } ]
 
 [sub_resource type="CapsuleShape2D" id=2]
@@ -27,7 +27,6 @@ position = Vector2( 1701, -65 )
 script = ExtResource( 4 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( -499, -282 )
 scale = Vector2( 0.886719, 1.04687 )
 frames = SubResource( 1 )
 animation = "general"
@@ -35,5 +34,5 @@ frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -535, -278 )
+position = Vector2( -25, 0 )
 shape = SubResource( 2 )
