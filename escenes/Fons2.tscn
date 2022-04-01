@@ -18,6 +18,10 @@ extents = Vector2( 205.875, 38.7501 )
 position = Vector2( 510, 239 )
 texture = ExtResource( 1 )
 
+[node name="ColoredShroom" type="Sprite" parent="Fons/ColoredShroom"]
+position = Vector2( -1022, -1 )
+texture = ExtResource( 1 )
+
 [node name="ColoredShroom2" type="Sprite" parent="Fons"]
 position = Vector2( 1534, 240 )
 texture = ExtResource( 1 )
@@ -25,6 +29,10 @@ texture = ExtResource( 1 )
 [node name="ColoredShroom3" type="Sprite" parent="Fons"]
 position = Vector2( 513, 1258 )
 rotation = -3.14159
+texture = ExtResource( 1 )
+
+[node name="ColoredShroom3" type="Sprite" parent="Fons/ColoredShroom3"]
+position = Vector2( 1021, 1.99744 )
 texture = ExtResource( 1 )
 
 [node name="ColoredShroom4" type="Sprite" parent="Fons"]
